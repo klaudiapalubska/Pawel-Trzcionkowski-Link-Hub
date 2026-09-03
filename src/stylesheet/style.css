@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Globalny reset i box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  color: #ffffff;
+  
+  /* Prawidłowe tło: mieszanka radialnych gradientów */
+  background-color: #000000;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(103, 0, 172, 1) 0%, transparent 65%),
+    radial-gradient(circle at 90% 40%, rgba(0, 181, 172, 0.84) 0%, transparent 60%);
+  background-attachment: fixed;
+  scale: 0.9;
+}
+
+/* Wrapper trzymający strukturę i zastępujący marginesy z body */
+.page-wrapper {
+  max-width: 1464px;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+
+/* Typografia */
+h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Nagłówek profilu */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px; /* Odstęp od reszty treści */
+}
+
+.profile-header img {
+  pointer-events: none; /* Blokuje kliknięcia, przeciąganie i prawy przycisk na obrazku */
+  user-select: none;    /* Blokuje zaznaczanie */
+  -webkit-user-drag: none; /* Blokuje drag & drop w przeglądarkach WebKit */
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Układ dwóch kolumn */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 193px; 
+}
+
+.about-box {
+  width: 778px;
+  flex-shrink: 0;
+  text-align: center; 
+}
+
+.about-box h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Sekcja Social Media */
+.social-box {
+  width: 426px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-box h2 {
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.social-link {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  text-decoration: none;
+  
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.social-link:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  justify-self: center;
+}
+
+.social-link span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #272727;
+  text-align: center;
+}
